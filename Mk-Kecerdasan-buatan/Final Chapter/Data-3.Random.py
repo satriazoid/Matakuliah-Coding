@@ -1,0 +1,11 @@
+# Rule 5: IF RENDAH AND CUKUP AND BAIK THEN FALSE
+α5 = min(μ_LOW, μ_CUKUP, μ_BAIK) = min(0.8, 0.1, 1.0) = 0.1 # → FALSE
+
+# Rule 14: IF SEDANG AND CUKUP AND BAIK THEN TRUE
+α14 = min(μ_MEDIUM, μ_CUKUP, μ_BAIK) = min(0.2, 0.1, 1.0) = 0.1 # → TRUE
+
+# Rule 2: IF RENDAH AND SEDIKIT AND BAIK THEN FALSE  
+α2 = min(μ_LOW, μ_SEDIKIT, μ_BAIK) = min(0.8, 0.9, 1.0) = 0.8 # → FALSE
+
+# Rule 11: IF SEDANG AND SEDIKIT AND BAIK THEN FALSE
+α11 = min(μ_MEDIUM, μ_SEDIKIT, μ_BAIK) = min(0.2, 0.9, 1.0) = 0.2 # → FALSE
