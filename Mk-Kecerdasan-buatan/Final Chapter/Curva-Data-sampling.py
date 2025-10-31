@@ -148,6 +148,9 @@ axes[3,2].legend()
 
 plt.tight_layout()
 
+# Perintah untuk menyimpan gambar
+# plt.savefig(r'D:\Satriaalfa\Kuliah\Semester-5\Mk-Kecerdasan-buatan\kurva_resolusi_tinggi.png', dpi=300, bbox_inches='tight')
+
 plt.show()
 
 # # TAMPILKAN PERHITUNGAN
