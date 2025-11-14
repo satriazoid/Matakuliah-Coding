@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satria Alfarizki - Portofolio Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Satria Alfarizki</div>
+            <ul>
+                <li><a href="index.html" class="active">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-section">
+        <div class="profile-content">
+            <div class="profile-text">
+                <h1>Halo, Saya Satria Alfarizki</h1>
+                <h2 id="job-title">Web Developer | UI/UX Designer</h2>
+                <p>Menciptakan solusi digital yang elegan dan berorientasi pada kinerja adalah spesialisasi saya. Saya berdedikasi dalam mengubah ide kompleks menjadi antarmuka pengguna yang intuitif dan fungsional. Mari lihat beberapa karya saya.</p>
+                <a href="gallery.html" id="cta-button" class="cta-button">Lihat Proyek</a>
+            </div>
+            <div class="profile-image-container">
+                <img src="image/foto.jpg" alt="Foto Profil Profesional Nama Anda" class="profile-image">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Satria Alfarizki. Profesional Minimalist Portfolio.</p>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        document.getElementById('cta-button').addEventListener('click', function() {
+            console.log('Tombol CTA diklik, mengalihkan...');
+        });
+    </script>
+</body>
+</html>

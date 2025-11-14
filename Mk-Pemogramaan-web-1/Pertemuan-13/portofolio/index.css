@@ -1,0 +1,460 @@
+/* --- Variabel Warna & Font Modern --- */
+:root {
+    --color-primary: #FFFFFF; /* Latar Belakang Putih Bersih */
+    --color-secondary: #1A1A1A; /* Teks dan Elemen Hitam Pekat */
+    --color-accent: #DAA520; /* Goldenrod (Emas Sedang) */
+    --color-text-light: #666666; /* Teks sekunder */
+    --font-primary: 'Montserrat', sans-serif; /* Menggunakan font modern */
+    --transition-speed: 0.3s ease-out; /* Transisi halus */
+}
+
+/* Import Google Font - Jika Anda ingin menggunakan Montserrat */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap'); */
+/* Cukup uncomment baris di atas dan tambahkan ke awal file CSS jika online */
+
+
+/* --- Reset & Base Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased; /* Teks lebih halus di WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Teks lebih halus di Firefox */
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 5%; /* Padding lebih besar */
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.5px; /* Sedikit ketat untuk modern */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* --- Navigation Bar (Minimalis & Elegan) --- */
+header {
+    background-color: var(--color-primary);
+    padding: 20px 5%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Bayangan lebih jelas */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem; /* Ukuran logo lebih besar */
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--color-secondary); /* Logo Emas */
+    text-transform: uppercase;
+}
+.logo span {
+    color: var(--color-secondary); /* Bagian hitam pada logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    font-weight: 600;
+    margin-left: 40px; /* Jarak lebih renggang */
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+/* Interaktif: Garis bawah muncul saat hover atau aktif */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Garis lebih tebal */
+    background-color: var(--color-accent);
+    bottom: -8px; /* Posisi lebih rendah */
+    left: 0;
+    transition: width var(--transition-speed);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* --- Home/Profile Section (Sederhana, Kontras, Menarik) --- */
+.profile-section {
+    padding-top: 100px; /* Padding lebih besar */
+    min-height: 90vh; /* Memenuhi sebagian besar viewport */
+    display: flex;
+    align-items: center;
+}
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap; /* Untuk responsivitas di tengah */
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Jarak lebih besar */
+    width: 100%;
+}
+
+.profile-text {
+    flex: 1; /* Fleksibel */
+    min-width: 300px; /* Batas lebar minimum */
+    text-align: left;
+}
+
+.profile-text h1 {
+    font-size: 3.5rem; /* Judul lebih besar */
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+.profile-text h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 30px;
+}
+
+.profile-text p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 50px; /* Margin lebih besar */
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent); /* Warna emas sebagai latar belakang utama */
+    color: var(--color-primary);
+    padding: 15px 35px; /* Padding lebih besar */
+    border-radius: 5px;
+    font-weight: 700;
+    border: 2px solid var(--color-accent);
+    transition: all var(--transition-speed);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary); /* Berubah menjadi hitam saat hover */
+    color: var(--color-primary);
+    border-color: var(--color-secondary); 
+}
+
+.profile-image-container {
+    flex-shrink: 0; 
+    text-align: center;
+}
+
+.profile-image {
+    width: 320px; /* Ukuran gambar lebih besar */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-accent); /* Bingkai lebih tebal */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bayangan lebih dalam */
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animasi pantul */
+}
+
+/* Interaktif: Efek zoom dan putar sedikit */
+.profile-image:hover {
+    transform: scale(1.08) rotate(2deg);
+    border-color: var(--color-secondary); /* Border berubah saat hover */
+}
+
+/* --- Gallery Section (Grid Lebih Modern) --- */
+.gallery-section h1 {
+    text-align: center;
+    color: var(--color-accent);
+    padding-top: 60px;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Jarak antar kartu lebih besar */
+}
+
+/* Agar footer selalu di bawah */
+body {
+  min-height: 100vh;
+}
+
+.project-card {
+    background-color: var(--color-primary);
+    border: 1px solid #eeeeee;
+    border-radius: 8px; /* Sudut lebih membulat */
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Bayangan lebih halus */
+    transition: all var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Interaktif: Bayangan lebih tebal dan naik sedikit saat hover */
+.project-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px); /* Naik lebih tinggi */
+}
+
+.project-image {
+    width: 100%;
+    height: 250px; /* Tinggi gambar lebih proporsional */
+    object-fit: cover;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.85;
+    transform: scale(1.02); /* Sedikit zoom pada gambar */
+}
+
+.project-info {
+    padding: 25px; /* Padding lebih besar */
+    flex-grow: 1; /* Memastikan info mengisi ruang */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Untuk meletakkan link di bawah */
+}
+
+.project-info h3 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.project-info p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    font-weight: 700;
+    color: var(--color-secondary);
+    align-self: flex-start; /* Link selalu di kiri bawah */
+    padding-bottom: 3px;
+    position: relative;
+}
+
+.project-link::after { /* Garis bawah pada link proyek */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    bottom: 0;
+    left: 0;
+    transition: width var(--transition-speed);
+}
+.project-link:hover::after {
+    width: 100%;
+}
+
+
+/* --- Contact Section (Fokus pada Detail) --- */
+.contact-section {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.contact-section h1 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Jarak lebih besar */
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    padding: 35px; /* Padding lebih besar */
+    width: 320px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-speed);
+}
+
+/* Interaktif: Border berubah menjadi emas dan bayangan lebih kuat */
+.contact-item:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 25px rgba(218, 165, 32, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+}
+
+.contact-item p {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.contact-item a {
+    font-weight: 700;
+    color: var(--color-accent); /* Link kontak berwarna emas */
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.contact-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    bottom: 0;
+    left: 0;
+    transition: width var(--transition-speed);
+}
+.contact-item a:hover::after {
+    width: 100%;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* ukuran kolom lebih kecil */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.gallery-container img {
+  width: 220px;         /* ukuran sedang */
+  height: 150px;        /* proporsional horizontal */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--gold);
+  transition: transform 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-container img:hover {
+  transform: scale(1.07); 
+}
+
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px 5%;
+    background-color: var(--color-secondary);
+    color: #DDDDDD; /* Warna teks lebih terang di footer */
+    font-size: 0.9rem;
+    margin-top: 80px; /* Margin lebih besar */
+    border-top: 5px solid var(--color-accent);
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 850px) {
+    .profile-content {
+        flex-direction: column-reverse; /* Gambar di atas teks untuk mobile */
+        text-align: center;
+        gap: 50px;
+    }
+    .profile-text {
+        text-align: center;
+    }
+    .profile-text h1 {
+        font-size: 3rem;
+    }
+    .profile-text h2 {
+        font-size: 1.4rem;
+    }
+    .cta-button {
+        padding: 12px 30px;
+    }
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-text h1 {
+        font-size: 2.5rem;
+    }
+    .profile-text h2 {
+        font-size: 1.2rem;
+    }
+    .profile-text p {
+        font-size: 1rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info-grid {
+        gap: 20px;
+    }
+    .contact-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
