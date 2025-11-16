@@ -1,0 +1,89 @@
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background:#f1f1f1;
+        }
+
+        /* HEADER */
+        .header{
+            background:#66809e;
+            color:white;
+            padding:20px;
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        /* SIDEBAR */
+        .sidebar-title{
+            font-size:22px;
+            font-weight:bold;
+            padding:15px;
+            margin:10px;
+            margin-bottom:15px;
+            color:#ffffff;
+        }
+        .sidebar{
+            width:250px;
+            float:left;
+            background:rgb(60, 55, 55);
+            height:100vh;
+            padding-top:20px;
+            border-right:4px solid #ccc;
+        }
+
+        .sidebar a{
+            display:block;
+            padding:15px;
+            margin:10px;
+            background:rgb(60, 55, 55);
+            text-decoration:none;
+            font-size:18px;
+            color:#d1c2c2;
+    
+        }
+
+        .sidebar a:hover{
+            background:#817575;
+            color:white;
+        }
+
+        /* KONTEN */
+        .content{
+            margin-left:270px;
+            padding:20px;
+        }
+
+        /* SEMUA HALAMAN DINAMIS DIS EMBUNYIKAN */
+        .page{
+            display:none;
+            padding:20px;
+            background:white;
+            border-radius:8px;
+            border:1px solid #ccc;
+        }
+
+        /* HALAMAN YANG SEDANG DIPILIH DITAMPILKAN */
+        #tentang:target,
+        #hobi:target,
+        #kontak:target{
+            display:block;
+        }
+
+        /* DEFAULT (ketika belum klik apa-apa) */
+        #tentang{
+            display:block;
+        }
+
+        /* FOOTER */
+        .footer{
+            clear:both;
+            background:#66809e;
+            color:white;
+            text-align:center;
+            padding:15px;
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
